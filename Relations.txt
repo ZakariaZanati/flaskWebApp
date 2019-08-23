@@ -1,0 +1,15 @@
+
+-----------------------------------
+
+MATCH (a:Author),(b:Publication)
+WHERE a.id IN b.authors_id 
+CREATE (b)-[:PUBLISHED_BY]->(a)
+
+-------------------------------------
+
+
+MATCH (a:Author),(b:Affiliation)
+WHERE a.affiliation_id = b.id
+CREATE (a)-[:AFFILIATED]->(b)
+
+--------------------------------------
