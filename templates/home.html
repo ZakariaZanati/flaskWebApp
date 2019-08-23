@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+    <div class="col-md-8">
+          <h1>Bienvenue ! </h1>
+          <p>       Ce site est conçu pour le but d'afficher quelques indicateurs scientifiques à partir des données de plusieurs auteurs et affiliations
+                    disponible sur <a href="https://www.scopus.com/search/form.uri?display=basic"><em>Scopus</em></a>.   
+
+          </p>
+          <h3>Les indicateurs disponibles :</h3>
+
+          <ul>
+              <li> <a href="{{ url_for('indicateurs1') }}">Indicateur 1 :</a> Nombre de publications des top 20 affiliations dans le monde de 2015 à 2018. </li>
+              <li> <a href="{{ url_for('indicateurs2') }}">Indicateur 2 :</a> Comparaison entre 5 université américaine de 2015 à 2018.</li>
+              <li> <a href="{{ url_for('indicateurs3') }}">Indicateur 3 :</a> Nombre de publications pour le top 5 mondiale dans les années 2016, 2017, 2018.</li>
+          </ul>
+    </div> 
+{% endblock content %}
